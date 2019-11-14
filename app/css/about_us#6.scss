@@ -21,10 +21,11 @@ background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
- box-sizing: border-box;
+  box-sizing: border-box;
   text-align: center;
   font-size: $f-base;
   color: #8e8e8e;
+  min-height: 100px;
 }
 .box-title__h2 {
   text-transform: uppercase;
