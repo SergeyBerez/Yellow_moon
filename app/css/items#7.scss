@@ -1,0 +1,57 @@
+/* ------------------ #7 задание end  css style блока  items   */
+
+.block-about-us--height {
+  min-height: 200px;
+  counter-reset: i;
+}
+
+.block-about-us {
+  min-height: 300px;
+  background: #ffffff;
+}
+
+.box-item-about-us {
+  box-sizing: border-box;
+  text-align: center;
+  text-justify: auto;
+  word-wrap: break-word;
+  font-size: $f-base;
+  color: #8e8e8e;
+}
+
+.h2-about-us {
+  text-align: center;
+  text-transform: uppercase;
+  color: #131316;
+  font-size: $h2-fs;
+  padding-bottom: 5%;
+}
+
+.h2-about-us + .p-yellow {
+  color: #ffe600;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-size: $f-base;
+}
+
+.box-item-about-us > p {
+  padding-bottom: 10%;
+  color: #131316;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-size: $f-base;
+}
+
+.line-yellow {
+  border: 1px solid #ffe600;
+}
+/* счетчик для заголовка  */
+.block-about-us--height p::before {
+  font-size: 2.5rem;
+  padding-right: 10px;
+  margin-right: 10px;
+  color: #ffe600;
+  border-right: 1px solid #ffe600;
+  counter-increment: i;
+  content: '0' counter(i);
+}

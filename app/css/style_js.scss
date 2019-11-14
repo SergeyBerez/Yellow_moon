@@ -1,0 +1,22 @@
+.box-title-js {
+  cursor: pointer;
+}
+
+.innner-div-js {
+  display: none;
+}
+
+.butnUp-js {
+ box-sizing: border-box;
+  transition: 0.5s;
+  opacity: 0;
+  cursor: pointer;
+  position: fixed;
+  z-index: 1;
+  top: 50vh;
+  left: 80vw;
+  text-transform: uppercase;
+  border: 2px solid rgba(73, 71, 71, 0.247);
+  border-radius: 5px;
+}
+

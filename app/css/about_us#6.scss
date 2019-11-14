@@ -1,0 +1,43 @@
+/* ================#6   css style блока ABOUT US========== */
+.secsion-about-us{
+background: #ffffff;
+   max-width: 1920px;
+   margin: 0 auto; 
+}
+.about-us {
+  min-height: 300px;
+  
+  
+}
+.title--height {
+  min-height: 200px;
+  //  counter-reset: i;
+}
+.div-line--yellow {
+  border: 1px solid #ffe600;
+}
+.box-title {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ box-sizing: border-box;
+  text-align: center;
+  font-size: $f-base;
+  color: #8e8e8e;
+}
+.box-title__h2 {
+  text-transform: uppercase;
+  color: #131316;
+  font-size: $h2-fs;
+  padding-bottom: 5%;
+}
+
+.box-title__p--yellow {
+  font-size: $f-base;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #ffe600;
+}
+
+/* ================#6 end  css style блока ABOUT US========== */
