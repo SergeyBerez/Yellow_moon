@@ -2,7 +2,6 @@ var butnUp = document.querySelector('.butnUp-js');
 var menu = document.querySelector('.header');
 document.addEventListener('scroll', function(e) {
   if (window.pageYOffset > 200) {
-    console.log(menu);
     butnUp.style.opacity = '1';
   } else if (window.pageYOffset < 200) {
     butnUp.style.opacity = '0';
@@ -13,18 +12,14 @@ document.addEventListener('scroll', function(e) {
 var ArrLi = document.querySelectorAll('li');
 for (var i = 0; i < ArrLi.length; i++) {
   ArrLi[i].addEventListener('mouseover', function(e) {
-    console.log(e.target);
     for (var i = 0; i < ArrLi.length; i++) {
       ArrLi[i].classList.remove('active-menu');
       ArrLi[i].addEventListener('mouseout', function(e) {
         ArrLi[0].classList.add('active-menu');
       });
     }
-    
   });
 }
-
-
 
 var boxTitle = document.querySelector('.box-title-js');
 var boxs = document.querySelectorAll('.portfolio-boxs');
@@ -46,7 +41,6 @@ document.addEventListener('mousemove', function(e) {
 });
 var i = 0;
 document.addEventListener('click', function(e) {
-  
   if (e.target.classList.contains('box-title-js')) {
     if (document.querySelector('.portfolio-boxs--active')) {
       document.querySelector('.del-active-js ').style.display = 'none';
@@ -68,18 +62,17 @@ document.addEventListener('click', function(e) {
 
 $('a').on('click', function(e) {
   e.preventDefault();
-  // console.log($(this));
+
   var attr = $(this).attr('href');
   var h = $(attr).offset().top;
-  console.log(h);
+
   $('html,body').animate({ scrollTop: h }, 1000);
 });
 
-$('.butnUp-js').on('click', function () {
+$('.butnUp-js').on('click', function() {
   console.log(1111);
   $('html,body').animate({ scrollTop: 0 }, 1000);
 });
-
 
 $(function() {
   $('#slider').slick({
@@ -88,4 +81,46 @@ $(function() {
     slidesToShow: 4,
     slidesToScroll: 1,
   });
+});
+
+// отправка формы
+
+var form = document.querySelector('.form');
+var overlay = document.querySelector('.overlay');
+var modal = document.querySelector('.features_title3');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  var obj = {
+    Name: document.querySelector('[name="name"]').value,
+    subject: document.querySelector('[ name="subject]').value,
+    email: document.querySelector('[name="email"]').value,
+  };
+
+  axios
+    .post('https://my-json-server.typicode.com/SergeyBerez/server/myPost', {
+      obj,
+    })
+    .then(function(response) {
+      var { data } = response;
+      console.log(data);
+      overlay.classList.add('show');
+      modal.classList.add('show');
+      modal.textContent = `${data.obj.name} ваша заявка принята`;
+      return data;
+    })
+    .then(data => {
+      //inputs[3].textContent = `${data.obj.name} ваша заявка принята`;
+    })
+    .catch(error => {
+      console.log(`ошибка ${error}`);
+    });
+});
+
+document.addEventListener('click', function(e) {
+  console.log(e.target);
+  if (e.target.className == 'overlay show') {
+    overlay.classList.remove('show');
+    modal.classList.remove('show');
+  }
 });
