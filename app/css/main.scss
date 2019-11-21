@@ -1,5 +1,3 @@
-
-
 html {
   font-size: 62.5%;
 }
@@ -9,17 +7,16 @@ body {
   padding: 0;
   //  border: 2px solid #282729;
   font-family: 'Roboto', sans-serif;
- 
 }
 $h2-fs: 2.5rem;
 $f-base: 1.5rem;
 
 .container {
-  //  border: 1px solid #000;
+   border: 2px solid rgb(0, 0, 0);
   max-width: 1440px;
 }
 .outline {
-  // border: 1px solid red;
+  border: 1px solid red;
 }
 // =====имропт дугих стилей
 @import 'header.scss';
@@ -30,12 +27,15 @@ $f-base: 1.5rem;
 @import 'portfolio11';
 @import 'clients12';
 @import 'contact14.scss';
+@import 'footer';
 
 // ======
 
 @media screen and (max-width: 960px) {
   .box-item-about-us div {
-    background: rgba(141, 153, 175, 0.342);
+    background: #f3f3f3;
+    text-align: justify;
+    text-indent: 1.5rem;
   }
 
   .box-item-about-us {

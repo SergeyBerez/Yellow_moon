@@ -1,0 +1,35 @@
+.footer {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: #131316;
+  height: 200px;
+}
+.footer-copirate {
+  font-size: 1.3rem;
+  color: #ffe600;
+}
+
+.footer_menu {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.footer_menu li {
+  margin-right: 2%;
+}
+
+.footer_menu li a {
+  display: block;
+  padding: 5px 20px;
+  
+  text-decoration: none;
+ 
+  text-transform: uppercase;
+ 
+  
+  border: 1px solid transparent;
+  transition: 0.5s;
+}

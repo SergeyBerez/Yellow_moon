@@ -1,3 +1,4 @@
+
 .header {
   max-width: 1920px;
   margin: 0 auto;
@@ -6,6 +7,11 @@
   justify-content: center;
   min-height: 300px;
   align-items: center;
+}
+.header-nav {
+  max-width: 1920px;
+  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .main-logo img {
@@ -27,11 +33,7 @@
 
 /*<!--  #5 задание css style  для  ХЕДЕР СТАРТ  -->*/
 
-.header-nav {
-  max-width: 1920px;
-  margin: 0 auto;
-  /* margin: 0 auto; */
-}
+
 
 // .fixed{
 //   position: fixed;
