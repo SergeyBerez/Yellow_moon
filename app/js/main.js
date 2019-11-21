@@ -88,14 +88,14 @@ $(function() {
 var form = document.querySelector('.form');
 var overlay = document.querySelector('.overlay');
 var modal = document.querySelector('.features_title3');
-
+let inpts = document.querySelectorAll('.input');
 form.addEventListener('submit', function(e) {
   e.preventDefault();
-  var obj = {
-    Name: document.querySelector('[name="name"]').value,
-    subject: document.querySelector('[ name="subject"]').value,
-    email: document.querySelector('[name="email"]').value,
-  };
+  let formObj = new FormData(form);
+  let obj = {};
+  for (let [name, value] of formObj) {
+    obj[name] = value;
+  }
 
   axios
     .post('https://my-json-server.typicode.com/SergeyBerez/server/myPost', {
@@ -106,10 +106,13 @@ form.addEventListener('submit', function(e) {
       console.log(data);
       overlay.classList.add('show');
       modal.classList.add('show');
-      modal.textContent = `${data.obj.name} ваша заявка принята`;
+      modal.innerHTML = ` <h2 class="box-title__h2">${data.obj.name}</h2> </br> ваша заявка принята`;
       return data;
     })
     .then(data => {
+      for (let i = 0; i < inpts.length; i++) {
+        inpts[i].value = '';
+      }
       //inputs[3].textContent = `${data.obj.name} ваша заявка принята`;
     })
     .catch(error => {
@@ -117,8 +120,8 @@ form.addEventListener('submit', function(e) {
     });
 });
 
-document.addEventListener('click', function(e) {
-  console.log(e.target);
+overlay.addEventListener('click', function(e) {
+  //console.log(e.target);
   if (e.target.className == 'overlay show') {
     overlay.classList.remove('show');
     modal.classList.remove('show');

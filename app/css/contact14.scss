@@ -45,12 +45,15 @@ input::placeholder {
 }
 
 input[type='submit'] {
+  position: relative;
   width: 100%;
   cursor: pointer;
   color: #ffeb33;
   background: #131316;
 }
-
+input[type='submit']:active {
+  top: 4px;
+}
 .overlay {
   z-index: 100;
   display: none;
@@ -68,8 +71,11 @@ input[type='submit'] {
 .features_title3 {
   display: none;
   position: fixed;
-
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
   max-width: 300px;
+  font-size: 2rem;
   background: #ffffff;
 
   box-shadow: 5px 5px 5px rgb(58, 57, 57);
