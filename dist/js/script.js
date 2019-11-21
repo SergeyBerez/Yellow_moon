@@ -80,6 +80,19 @@ $(function() {
     dots: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    speed: 300,
+    responsive: [
+      {
+        breakpoint: 860,
+        settings: {
+          infinite: true,
+          dots: true,
+          speed: 300,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
 });
 
