@@ -2,7 +2,7 @@
   max-width: 1920px;
   margin: 0 auto;
   background: #131316;
-  height: 200px;
+  height: 100px;
 }
 .footer-copirate {
   font-size: 1.3rem;
@@ -13,6 +13,7 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  min-height: 50px;
   list-style-type: none;
   justify-content: center;
 }
@@ -26,10 +27,13 @@
   padding: 5px 20px;
   color: antiquewhite;
   text-decoration: none;
- 
   text-transform: uppercase;
- 
-  
   border: 1px solid transparent;
   transition: 0.5s;
+}
+.footer_menu li a:hover {
+  color: #1111b1;
+}
+.het {
+  min-height: 200px;
 }
