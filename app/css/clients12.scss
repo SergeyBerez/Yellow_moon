@@ -4,16 +4,19 @@
 
 .slider-container {
   margin: 0 auto;
-  max-width: 1920px; 
-  
+  max-width: 1920px;
   background: #424245;
 }
-.slider-clients {
+#slider {
+  // border: 10px solid #000;
+  display: flex;
+  align-items: center;
+  max-width: 1140px;
   min-height: 200px;
 }
-
-#slider {
-  // border: 1px solid #000;
-  //  max-width: 1200px;
+.slider-box_img {
+  // border: 1px solid rgb(233, 221, 221);
 }
-
+.slider-box_img img {
+  margin: 0 auto;
+}
